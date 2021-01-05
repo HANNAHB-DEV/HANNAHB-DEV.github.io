@@ -33,7 +33,7 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 **최단경로와 음수 가중치**
 
-![](https://hannahb-dev.github.io/assets/Algorithm/short/short.PNG)
+![](/assets/Algorithm/short/short.PNG)
 
 가중치에 음수가 존재하는 경우도 있음, 보통 최단경로는 음수 가중치가 없다고 가정하는 경우가 많음. 위의 이미지에서 처럼 음수싸이클이 있으면 최단경로가 정의되지 않는다.
 
@@ -41,7 +41,7 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 - 최단경로의 어떤 부분경로도 역시 최단경로이다.
 
-  ![short2](https://hannahb-dev.github.io/assets/Algorithm/short/short2.PNG)
+  ![short2](/assets/Algorithm/short/short2.PNG)
 
 - 최단 경로는 사이클을 포함하지 않는다.(음수 사이클이 없다는 가정 하에서)
 
@@ -61,18 +61,14 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 그래프의 에지에 대해서 relax한다. 
 
-![short3](https://hannahb-dev.github.io/assets/Algorithm/short/short3.PNG)
+![short3](/assets/Algorithm/short/short3.PNG)
 
 1.  5->9에서 가는.. d[u]=5, d[v]=9
-
    출발점s로 부터 u까지 길이가 5인 경로를 알고있다는 것. s->u 길이가 5인 경로 有
-
    s->v까지는 9의 길이. relax한다는 것은, 기존에 알고있던 경로보다 더 나은 경로를 발견한다는 것.
-
    s->v로 갈때, s->u->v가 더 나은 연산일 수 있다.
 
 2. d[u]=5, d[v]=6 s에서 v까지 길이 6인걸 알고있음
-
    s->u->v가 7이니까 더 길어서 relax하지 않는다.
 
 **single-source의 최단 경로**
@@ -92,7 +88,6 @@ Generic-Single-Sources(G,w,s)
 ```
 
 Q1. 이렇게 반복하면 최단 경로가 찾아지는가?
-
 Q2. 몇 번 반복해야 하는가? (repeat~until)
 
 어떤 노드의 d값이 update가 될 수도 있고, 안될 수도 있는데 하나라도 된다면 다시 repeat함.
@@ -100,11 +95,9 @@ Q2. 몇 번 반복해야 하는가? (repeat~until)
 ![](/assets/Algorithm/short/short4.PNG)
 
 if) 임의의 노드 v에 대해서 s->v까지 간다고 가정할 때, 최단 경로에 포함된 에지의 개수는 n-1개.
-
 모든 에지들에 대해서 relax하는데, repeat-until이 한번 도는 걸 한 라운드라고 가정할 때, d(s)=0, d(v1)=무한대였는데, 최단 경로의 일부는 최단경로 이므로 d(v1) = d(s)+u(s,v1) = δ(s,v1)
 
 d(v2) = d[v1] + w(v1,v2) = δ(s,v2)... 이렇게
-
 d(vi) =  δ(s,vi)
 
 **Bellman-Ford 알고리즘**
