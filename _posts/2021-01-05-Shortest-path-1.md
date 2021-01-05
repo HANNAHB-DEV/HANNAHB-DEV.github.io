@@ -33,7 +33,7 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 **최단경로와 음수 가중치**
 
-![](C:\Users\Administer\Desktop\short.PNG)
+![](https://hannahb-dev.github.io/assets/Algorithm/short/short.PNG)
 
 가중치에 음수가 존재하는 경우도 있음, 보통 최단경로는 음수 가중치가 없다고 가정하는 경우가 많음. 위의 이미지에서 처럼 음수싸이클이 있으면 최단경로가 정의되지 않는다.
 
@@ -41,7 +41,7 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 - 최단경로의 어떤 부분경로도 역시 최단경로이다.
 
-  ![short2](C:\Users\Administer\Desktop\short2.PNG)
+  ![short2](https://hannahb-dev.github.io/assets/Algorithm/short/short2.PNG)
 
 - 최단 경로는 사이클을 포함하지 않는다.(음수 사이클이 없다는 가정 하에서)
 
@@ -61,7 +61,7 @@ if) 에지의 개수가 경로의 길이, 모든 weight가 동일한다면 개�
 
 그래프의 에지에 대해서 relax한다. 
 
-![short3](C:\Users\Administer\Desktop\short3.PNG)
+![short3](https://hannahb-dev.github.io/assets/Algorithm/short/short3.PNG)
 
 1.  5->9에서 가는.. d[u]=5, d[v]=9
 
@@ -97,7 +97,7 @@ Q2. 몇 번 반복해야 하는가? (repeat~until)
 
 어떤 노드의 d값이 update가 될 수도 있고, 안될 수도 있는데 하나라도 된다면 다시 repeat함.
 
-![](C:\Users\Administer\Desktop\short4.PNG)
+![](/assets/Algorithm/short/short4.PNG)
 
 if) 임의의 노드 v에 대해서 s->v까지 간다고 가정할 때, 최단 경로에 포함된 에지의 개수는 n-1개.
 
