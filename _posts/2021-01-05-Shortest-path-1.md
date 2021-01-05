@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[알고리즘] 최단경로 알고리즘 1"
-date:   2021-01-05T18:25:52-05:00
+date:   "2021-01-05 18:25:52"
 author: Hannah-B
 categories: Algorithm
 tags: 최단경로, 최단경로 알고리즘
