@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] 최단경로 알고리즘 2"
+date:   "2021-01-07 20:33:52"
+author: Hannah-B
+categories: Algorithm
+tags: 최단경로 알고리즘
+---
+
 **최단경로(Shortest path problem)**
 
 ```
@@ -14,7 +23,7 @@ BELLMAN-FORD(G,w,s)
 시간복잡도 O(nm)
 ```
 
-![image-20210107195413156](C:\Users\Administer\AppData\Roaming\Typora\typora-user-images\image-20210107195413156.png)
+![short2-2](/assets/Algorithm/short/short2-2.PNG)
 
 어떤 순서로 하느냐에 따라 순서가 달라짐. 워스트 케이스에 가까운 예.
 
@@ -27,7 +36,7 @@ BELLMAN-FORD(G,w,s)
 
 **Worst Scenario**
 
-![image-20210107195757459](C:\Users\Administer\AppData\Roaming\Typora\typora-user-images\image-20210107195757459.png)
+![short2-3](/assets/Algorithm/short/short2-3.PNG)
 
 d(v)=1000이고 뒤쪽이 각각 100이라고 가정할 떄, 1100, 1200, 1300 등으로 측정됨
 d(v)= 800일때는 뒤는 900,1000,1100 등
@@ -37,7 +46,7 @@ d(v)가 바뀔 떄 마다 값이 계속 바뀐다.
 
 **Dijkstra의 알고리즘**
 
-![image-20210107200125394](C:\Users\Administer\AppData\Roaming\Typora\typora-user-images\image-20210107200125394.png)
+![short2-4](/assets/Algorithm/short/short2-4.PNG)
 
 최소의 노드로 나가는 에지. 앞의 10, 5 뒤에는 한번 더 거쳐야 하므로 최소가 아님
 d(s)=δ(s,s) 일때 릴렉싱하였을 떄 출발점에 대해서는 릴렉싱할 필요가 없다(출발점?)
@@ -54,7 +63,7 @@ d(v)=5가 최단 경로의 길이. 방문한 노드는 칠함. 5+2=7
 
 아니라고 한다면 s->u까지 다른 최단경로가 존재
 
-![](C:\Users\Administer\Desktop\short2-6.PNG)
+![short2-6](/assets/Algorithm/short/short2-6.PNG)
 
 d(v)>=d(u) 이므로 모순.
 처음으로 s에 속하지 않는 다른 경로로 간다면.. 녹색>=d(v)+v->w
@@ -62,7 +71,7 @@ d(v)>=d(u) 이므로 모순.
 - d(u)가 최소인 노드 u∈XS를 찾고, s에 u를 추가
 - s가 변경되었으므로 다른 노드들의 d(v)값을 갱신
 
-![](C:\Users\Administer\Desktop\short2-8.PNG)
+![short2-8](/assets/Algorithm/short/short2-8.PNG)
 
 d(v)=min{d(v),d(u)+w(u,v)} 
 **즉, 에지 (u,v)에 대해서 relaxation하면 loop invariant가 계속 유지됨**
@@ -73,7 +82,7 @@ d(v)=min{d(v),d(u)+w(u,v)}
 (b) 0은 고려할 필요가 없음(갱신되지 않음), 5가 최단길이, 나가는 노드들에 대해 relax. 2가 더 적으니까
 (c) 7로 옴. S={0,5}가 됨. 7에서 나가는 에지들은 6뿐이니 7+6=13, 14가 13이 됨.
 
-![](C:\Users\Administer\Desktop\short2-9.PNG)
+![short2-9](/assets/Algorithm/short/short2-9.PNG)
 
 ```
 gijkstra(G,w,s)
