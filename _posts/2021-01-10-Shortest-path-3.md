@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] 최단경로 알고리즘 3"
+date:   "2021-01-10 09:54:52"
+author: Hannah-B
+categories: Algorithm
+tags: 최단경로 알고리즘
+---
+
 ## Floyed-Warshall 알고리즘 (all to all)
 
 Dynamic Prog
@@ -11,7 +20,7 @@ Dynamic Prog
   - 중간에 노드 집합 {1,2,....,n}에 속한 노드들만 거쳐서 노드 i->j까지 가는 최단경로의 길이
     모든 노드들은 1~n까지의 정수, i->j로 까지 갈 떄 1,2...n를 지난다.
 
-    ![](C:\Users\Administer\Desktop\short3-1.PNG)
+  ![](/assets/Algorithm/short/short3-1.PNG)
 
 d0이라면, k=0, {1...0}이므로 공집합, 즉 아무 노드도 지나지 않고 직접 i->j로 간다.
 i.j가 존재한다면 에지의 weight는 wij이다. 에지가 없다면 경로가 존재하지 않으므로 무한대.
@@ -19,7 +28,8 @@ i.j가 존재한다면 에지의 weight는 wij이다. 에지가 없다면 경로
 dⁿ[i,j]의 경우 {1,2,....n} 에서는 아무 조건 없이 가장 최단경로를 선택한다.
 
 dk[i,j] i->j 사이에 1~k가 있는 경우, 노드 k를 지나는 경우가 있을 수 있고, 아닐 수도 있음.
-k를 지나지 않는다면, 1~k-1의 노드들을 지난다. 그 경우 dk-1[i,j]![](C:\Users\Administer\Desktop\short3-2.PNG)
+k를 지나지 않는다면, 1~k-1의 노드들을 지난다. 그 경우 dk-1[i,j]
+![](/assets/Algorithm/short/short3-2.PNG)
 
 밑의 케이스가 dk-1[i,j], 위의 왼쪽 경우 dk-1[i,k] (k-1개가 속해있고 k까지의 경로이므로) 오른쪽은 dk-1[k,j]
 
