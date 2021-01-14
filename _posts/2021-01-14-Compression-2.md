@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 2"
+date:   "2021-01-14 17:44:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
+
 ## Huffman Method with Run-Length Encoding
 
 - 파일을 구성하는 각각의 run들을 하나의 super-symbol로 본다. 이 super-symbol들에 대해서 Huffman coding을 적용한다
@@ -12,7 +21,7 @@
 if) AAA = 0, B=10, AA=110, CC=1110, A1=11110로 코드를 부여한다면(prefix code), 0101101110110100으로 인코딩됨. 20bits.
 서로 다른 문자들에게 코드를 부여하지 않고, run을 대상으로 부여하고 카운트를 하도록 한다.
 
-이미지 2-1
+  ![](/assets/Algorithm/short/comp2-1.PNG)
 
 1. 다섯개의 super-symbol들 중에서 빈도가 가장 적은 것을 고른다. if AAA, CC를 고른다면, 두개를 묶어 트리를 만들고 부모로 1+1=2(빈도)를 가진다.
 2. 1,2,2,2가 있을 때 A, B를 고른다고 가정하면 3이 됨.
@@ -26,8 +35,6 @@ if) AAA = 0, B=10, AA=110, CC=1110, A1=11110로 코드를 부여한다면(prefix
 - 먼저 각 run들을 표현할 하나의 클래스 class Run을 정의함.
   클래서 run은 적어도 세 개의 데이터 멤버 symbol, runLen, freq를 가져야 한다. 
   여기서 symbol은 byte, 나머지는 정수들이다.
-
-
 - 인식한 run들은 하나의 ArrayList에 저장한다.
 - 적절한 생성자와 equals 메서드를 구현한다.
 
@@ -38,7 +45,6 @@ class Run{
   int freq;
 }
 ```
-
 데이터 파일은 적어도 두 번 읽어야 한다. 한번은 run을 찾고, 다음은 압축을 실행하기 위함.
 여기서는 RandomAccessFile을 이용하여 데이터 파일을 읽어본다.
 
