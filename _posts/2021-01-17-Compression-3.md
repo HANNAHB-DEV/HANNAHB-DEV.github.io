@@ -1,4 +1,11 @@
-제 2단계 Huffman Tree
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 3"
+date:   "2021-01-17 11:44:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
 
 ### Huffman Coding
 
@@ -12,7 +19,7 @@
 
 ### 최소 힙
 
-이미지 3-1
+![](/assets/Algorithm/short/comp3-1.PNG)
 
 5개의 run, 각각의 run을 single node tree로 본다.
 5개의 single-node tree를 heap에 저장하는데, minimal heap은 complete binary tree이며, heap property를 만족해야함(부모는 자식보다 작거나 같다.)
@@ -23,7 +30,7 @@
 
 부모에서 자식, 왼쪽에서 오른쪽 방향으로 heap에 넣어준다.
 
-3-2
+![](/assets/Algorithm/short/comp3-2.PNG)
 
 1. heap을 만들어야 함, 부모는 자식보다 작아야 하며 complete binary tree의 형태로 만들어야 한다.
 2. frequency가 최소인 2개의 tree를 추출해낸다(extractMin)
@@ -32,18 +39,18 @@
 4. 삭제된 두 트리를 합치기 위해 루트노드로 자식노들의 합인 트리를 만든 다음, 다시 heap에 insert함(single-node tree아님)
 5. heap size=4, 그 중 하나는 single-node 트리가 아니라 3개의 트리가 합쳐진 트리
 
-이미지 3-3
+![](/assets/Algorithm/short/comp3-3.PNG)
 
 6. 다음의 과정을 계속해서 반복함
 7. C21, --2가 삭제되고 또 둘을 합쳐서 부모노드를 만들어 다시 트리에 insert함
 8. A22 - B12 - --3 heap size=3.
 
-이미지 3-4
+![](/assets/Algorithm/short/comp3-4.PNG)
 
 9. A22, B12를 삭제, 이 둘을 합쳐 - - 4
 10. 다시 insert, heap size = 2. 노드가 3개인 트리 하나, 5개인 트리 하나.
 
-이미지 3-5
+![](/assets/Algorithm/short/comp3-5.PNG)
 
 11. extractMin, heap은 empty상태가 됨
 12. 4+3인 부모 노드를 만들어(extracMin) insert한다. heap size=1
@@ -80,9 +87,9 @@ public class HuffmanCoding{
 }
 ```
 
-```java
 Huffman Tree 출력해보기
 
+```java
 private void printHuffmanTree(){
   preOrederTraverse(theRoot, 0);
 }
