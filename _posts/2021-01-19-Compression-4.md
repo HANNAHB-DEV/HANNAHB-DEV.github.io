@@ -1,6 +1,15 @@
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 4"
+date:   "2021-01-19 18:44:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
+
 ### 3단계 : Codeword 부여하기
 
-image1
+![](/assets/Algorithm/short/comp4-1.PNG)
 
 코드워드를 부여할 run은 leaf node.
 RUN A22, B12, .... 와 같이. theRoot의 왼쪽은 0, 오른쪽은 1로 정의해 각각의 트리에 코드워드를 부여한다.
