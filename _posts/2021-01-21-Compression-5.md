@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 5"
+date:   "2021-01-21 18:06:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
+
 ## CodeWord 검색하기
 
 #### 인코딩
@@ -7,7 +16,7 @@
 - 검색하기 편리한 구조를 만드려면?
   중간 노드는 허프만 코드를 만들기 위해 부여되는 것이라 트리 구조는 필요가 없음. 리프노드의 코드워드만 있으면 된다.
 
-이미지
+![](/assets/Algorithm/short/comp5-1.PNG)
 
 AAA라는 run이 있을 때, symbol=A, runLen=3
 표 상에서 right이 이어지므로 AAA, B, C가 됨
