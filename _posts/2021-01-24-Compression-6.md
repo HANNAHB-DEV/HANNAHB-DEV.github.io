@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 6"
+date:   "2021-01-24 09:54:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
+
 ### 인코딩 하기
 
 #### 인코딩
@@ -72,7 +81,7 @@ public class HuffmanCoding{
 
 encode를 위하여 하나의 buffer를 사용한다.
 
-이미지
+![](/assets/Algorithm/short/comp6-1.PNG)
 
 1. collectRuns를 실행하여 run을 인식하고, codeWord를 검색해 압축파일에 적어주어야 한다.
 2. buffer를 사용하여 비트를 채워 나가고, byte가 꽉 차면 실제로 파일에 write하게 된다
