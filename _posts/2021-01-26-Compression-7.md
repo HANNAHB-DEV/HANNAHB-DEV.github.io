@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] Case study - Huffman Coding 7"
+date:   "2021-01-26 20:14:52"
+author: Hannah-B
+categories: Algorithm
+tags: 허프만코딩 압축
+---
+
 ### 압축7 : 디코딩하기
 
 #### Class HuffmanDecoder
