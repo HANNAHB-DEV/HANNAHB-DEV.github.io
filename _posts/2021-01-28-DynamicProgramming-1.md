@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] 동적계획법 1"
+date:   "2021-01-28 17:35:52"
+author: Hannah-B
+categories: Algorithm
+tags: 동적계획법
+---
+
 ### Dynamic Programming
 
 #### Fibonacci Numbers (피보나치 수열)
