@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] 동적계획법 2"
+date:   "2021-01-31 10:09:52"
+author: Hannah-B
+categories: Algorithm
+tags: 동적계획법
+---
+
 ### 18-2 동적계획법2 - Basic Example
 
 #### 행렬 경로 문제
