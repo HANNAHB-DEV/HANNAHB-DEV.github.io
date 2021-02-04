@@ -44,7 +44,7 @@ pxq, qxr (여기서 q는 같아야 함)를 곱하면  pxr의 행렬이 나온다
 
 #### Optimal Substruction
 
-![](/assets/Algorithm/short/dp4-1.PNG)
+![](/assets/Algorithm/short/dp4-1.JPG)
 
 순환식을 구해야 하는데, 최적해를 구하고 일 부분에 대한 최적해가 맞는지 확인해야 함.
 A1~An을 곱할 떄 최선의 과정이 있다고 가정하는데, n개의 행렬을 곱하는 것은 결과적으로 마지막 행렬 Z가 나오는 것이고, Z는 X, Y의 두개의 행렬을 곱한 것이므로, 여기서 X, Y에 대해서 생각해야 함.
@@ -54,7 +54,7 @@ if 위의 계산식이 최적해라면(과정이 최소라면) k개를 곱하는
 
 #### 순환식
 
-![](/assets/Algorithm/short/dp4-2.PNG)
+![](/assets/Algorithm/short/dp4-2.JPG)
 
 i<=j 라는 가정 하에서, 최소 곱셈횟수를 m[i,j]라고 함.
 Ai~Ak 곱하고(Pi-1Pk), Ak+1~Aj(PkPj)까지 곱해서 최선의 방법으로 곱한다.
@@ -65,7 +65,7 @@ i~j 사이의 k를 호출하는데, i~j의 간격이 좁아지므로 이 길이�
 
 #### 계산순서
 
-![](/assets/Algorithm/short/dp4-3.PNG)
+![](/assets/Algorithm/short/dp4-3.JPG)
 
 bottom up의 방식으로 해야함
 m[i,i], m[i,i+1], .... m[i,j-1]
