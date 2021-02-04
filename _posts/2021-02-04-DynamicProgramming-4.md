@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "[알고리즘] 동적계획법 4"
+date:   "2021-02-04 13:52:52"
+author: Hannah-B
+categories: Algorithm
+tags: 동적계획법
+---
+
 ### 동적계획법 4
 
 Matrix-Chain Multiplication
