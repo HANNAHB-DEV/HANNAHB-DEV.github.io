@@ -192,7 +192,7 @@
       resultDiv.innerHTML = ''; // 초기화
 
       if (person && outfit && situation) {
-        const url1 = `https://itimg.kr/413/IM/${person}/${outfit}+${situation}.webp`;
+        const url1 = `https://itimg.kr/413/IM/${person}/${outfit}${situation}.webp`;
         resultDiv.innerHTML += `<p><strong>조합 이미지:</strong><br><img src="${url1}" alt="조합 이미지"></p>`;
       }
 
