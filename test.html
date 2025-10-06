@@ -1,79 +1,109 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이미지 조합 생성기</title>
+  <style>
+    section {
+      margin-bottom: 20px;
+    }
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>HN’s Developer Journal | A simple yet classy theme for your Jekyll website or blog.</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="HN’s Developer Journal" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="A simple yet classy theme for your Jekyll website or blog." />
-<meta property="og:description" content="A simple yet classy theme for your Jekyll website or blog." />
-<link rel="canonical" href="https://hannahb-dev.github.io/" />
-<meta property="og:url" content="https://hannahb-dev.github.io/" />
-<meta property="og:site_name" content="HN’s Developer Journal" />
-<script type="application/ld+json">
-{"@type":"WebSite","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://hannahb-dev.github.io/assets/logo.png"}},"headline":"HN’s Developer Journal","url":"https://hannahb-dev.github.io/","description":"A simple yet classy theme for your Jekyll website or blog.","name":"HN’s Developer Journal","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+    .radio-group {
+      display: flex;
+      gap: 20px; /* 라디오 버튼 사이 간격 */
+      margin-top: 8px;
+    }
 
-    <link rel="stylesheet" href="/css/main.scss">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="https://hannahb-dev.github.io/">HN's Developer Journal</a></h1>
-      
+    .radio-group label {
+      white-space: nowrap;
+    }
 
-      <div class="home">
+    img {
+      margin-top: 20px;
+      max-width: 400px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
 
-<div class="site-header-container has-cover" style="background-image: url(/assets/header_image.jpg);">
-  <div class="scrim has-cover">
-    <header class="site-header">
-      <h1 class="title">HN's Developer Journal</h1>
-      <p class="subtitle">Journal of my voyage as a developer</p>
-    </header>
-  </div>
-</div>
+  <h1>이미지 조합 생성기</h1>
 
-<div class="wrapper">
-<ul class="post-list">
-  
-</ul>
-
-<nav class="pagination" role="navigation">
-	<p>
-    
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		
-		<span class="page-number">Page  of </span>
-		
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-		
-	</p>
-</nav>
-
-</div>
-</div>
-
-
-      
-      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-        This site is open source. <a href="https://github.com/HANNAHB-DEV/HANNAHB-DEV.github.io/edit/main/index.html">Improve this page</a>.
-      </div>
-      
+  <!-- 인물 섹션 -->
+  <section>
+    <h3>인물</h3>
+    <div class="radio-group" id="person-group">
+      <label><input type="radio" name="person" value="person1"> Person 1</label>
+      <label><input type="radio" name="person" value="person2"> Person 2</label>
+      <label><input type="radio" name="person" value="person3"> Person 3</label>
+      <label><input type="radio" name="person" value="person4"> Person 4</label>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
+  </section>
+
+  <!-- 복장 섹션 -->
+  <section>
+    <h3>복장</h3>
+    <div class="radio-group" id="outfit-group">
+      <label><input type="radio" name="outfit" value="outfit1"> Outfit 1</label>
+      <label><input type="radio" name="outfit" value="outfit2"> Outfit 2</label>
+      <label><input type="radio" name="outfit" value="outfit3"> Outfit 3</label>
+      <label><input type="radio" name="outfit" value="outfit4"> Outfit 4</label>
+    </div>
+  </section>
+
+  <!-- 상황 섹션 -->
+  <section>
+    <h3>상황</h3>
+    <div class="radio-group" id="situation-group">
+      <label><input type="radio" name="situation" value="situation1"> Situation 1</label>
+      <label><input type="radio" name="situation" value="situation2"> Situation 2</label>
+      <label><input type="radio" name="situation" value="situation3"> Situation 3</label>
+      <label><input type="radio" name="situation" value="situation4"> Situation 4</label>
+    </div>
+  </section>
+
+  <!-- 개별상황 섹션 -->
+  <section>
+    <h3>개별상황</h3>
+    <div class="radio-group" id="custom-group">
+      <label><input type="radio" name="custom" value="custom1"> Custom 1</label>
+      <label><input type="radio" name="custom" value="custom2"> Custom 2</label>
+      <label><input type="radio" name="custom" value="custom3"> Custom 3</label>
+      <label><input type="radio" name="custom" value="custom4"> Custom 4</label>
+    </div>
+  </section>
+
+  <!-- 버튼 -->
+  <button onclick="generateImage()">[생성]</button>
+
+  <!-- 결과 이미지 -->
+  <div id="result"></div>
+
+  <script>
+    function generateImage() {
+      const person = document.querySelector('input[name="person"]:checked')?.value;
+      const outfit = document.querySelector('input[name="outfit"]:checked')?.value;
+      const situation = document.querySelector('input[name="situation"]:checked')?.value;
+      const custom = document.querySelector('input[name="custom"]:checked')?.value;
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = ''; // 초기화
+
+      if (person && outfit && situation) {
+        const url1 = `https://itimg.kr/413/IM/${person}/${outfit}+${situation}.webp`;
+        resultDiv.innerHTML += `<p><strong>조합 이미지:</strong><br><img src="${url1}" alt="조합 이미지"></p>`;
+      }
+
+      if (person && custom) {
+        const url2 = `https://itimg.kr/413/IM/${person}/${custom}.webp`;
+        resultDiv.innerHTML += `<p><strong>개별 상황 이미지:</strong><br><img src="${url2}" alt="개별 상황 이미지"></p>`;
+      }
+
+      if (!person) {
+        resultDiv.innerHTML = `<p style="color:red;">⚠ 인물을 선택해주세요.</p>`;
+      }
+    }
+  </script>
+
+</body>
 </html>
